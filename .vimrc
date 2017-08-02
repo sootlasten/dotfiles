@@ -29,6 +29,9 @@ nnoremap tl  :tablast<CR>
 " Python's debugger
 nnoremap <leader>t yyP^C import pdb; pdb.set_trace()<Esc>
 
+" Turn on highlighted search by default
+set hlsearch
+
 " Highlight all instances of a word under cursor, when idle.
 " Type ,h to toggle highlighting on/off. 
 let g:highlighting = 0
