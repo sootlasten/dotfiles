@@ -29,7 +29,8 @@ nnoremap tl  :tablast<CR>
 " Python's debugger
 nnoremap <leader>t yyP^C import pdb; pdb.set_trace()<Esc>
 
-" 
+" Highlight all instances of a word under cursor, when idle.
+" Type ,h to toggle highlighting on/off. 
 let g:highlighting = 0
 function! Highlighting()
   if g:highlighting == 1
