@@ -29,19 +29,16 @@ nnoremap tl  :tablast<CR>
 " Python's debugger
 nnoremap <leader>t yyP^C import pdb; pdb.set_trace()<Esc>
 
-" Turn on highlighted search by default
+" Turn highlighted search on by default
 set hlsearch
 
-" Highlight all instances of a word under cursor, when idle.
-" Type ,h to toggle highlighting on/off. 
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Highlight and search all instances of a word under cursor, when idle.
 let g:highlighting = 0
 function! Highlighting()
-  if g:highlighting == 1
-    let g:highlighting = 0
-    return ":silent nohlsearch\<CR>"
-  endif
   let @/ = '\<'.expand('<cword>').'\>'
-  let g:highlighting = 1
   return ":silent set hlsearch\<CR>"
 endfunction
 nnoremap <silent> <expr> <leader>h Highlighting()
