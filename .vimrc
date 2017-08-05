@@ -1,6 +1,6 @@
-set number
-set relativenumber
 set tabstop=4 expandtab shiftwidth=4 softtabstop=4
+set relativenumber
+set number
 
 " Set horizontal line under cursor
 set cursorline
@@ -31,7 +31,10 @@ nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 
 " Python's debugger
-nnoremap <leader>t yyP^C import pdb; pdb.set_trace()<Esc>
+nnoremap <leader>t yyP^Cimport pdb; pdb.set_trace()<Esc>
+
+" Insert a print statement in C
+nnoremap <leader>d yyP^Cprintf("HERE!\n");<Esc>
 
 " Turn highlighted search on by default
 set hlsearch
@@ -46,3 +49,15 @@ function! Highlighting()
   return ":silent set hlsearch\<CR>"
 endfunction
 nnoremap <silent> <expr> <leader>h Highlighting()
+
+" Toggle relative numbering on and off
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+        set number
+    endif
+endfunction
+
+nnoremap <silent>  <leader>r :call NumberToggle()<CR>
