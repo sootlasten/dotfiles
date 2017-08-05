@@ -61,3 +61,9 @@ function! NumberToggle()
 endfunction
 
 nnoremap <silent>  <leader>r :call NumberToggle()<CR>
+
+" Basic brace pair completion. If you quickly press Enter after the open brace (to begin a code block), the closing brace will be inserted on the line below the cursor. If you quickly press the open brace key again after the open brace, nothing extra will be inserted—you will just get a single open brace. Finally, if you quickly type an open and close brace, Vim will not do anything special.
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
