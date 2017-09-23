@@ -75,6 +75,19 @@ inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
 
+" Double quotation marks
+inoremap "      ""<Left>
+inoremap "<CR>  "<CR>"<Esc>O
+inoremap ""     "
+inoremap ""     ""
+
+" Single quotation marks
+inoremap '      ''<Left>
+inoremap '<CR>  '<CR>"<Esc>O
+inoremap ''     '
+inoremap ''     ''
+
+
 " Move entire lines up and down using the arrow keys in normal, insert and visual modes
 nnoremap <up> :m .-2<CR>== 
 nnoremap <down> :m .+1<CR>== 
