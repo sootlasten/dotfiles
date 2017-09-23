@@ -13,12 +13,6 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" Disable Arrow keys in Insert mode
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
 " Open and close NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
 
@@ -80,3 +74,11 @@ inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
+
+" Move entire lines up and down using the arrow keys in normal, insert and visual modes
+nnoremap <up> :m .-2<CR>== 
+nnoremap <down> :m .+1<CR>== 
+inoremap <up> <Esc>:m .-2<CR>==gi
+inoremap <down> <Esc>:m .+1<CR>==gi
+vnoremap <up> :m '<-2<CR>gv=gv
+vnoremap <down> :m '>+1<CR>gv=gv
