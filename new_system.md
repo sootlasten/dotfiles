@@ -5,3 +5,4 @@ When installing a new Ubuntu system, carry out the following steps:
 3. Permanently switch Caps Lock and Esc: https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc
 4. Install vim-gtk: sudo apt install vim-gtk
 5. Increase key repeat time and delay (put into ~/.xinitrc for startx to pick it up): xset r rate 250 120
+6. If lspci hangs the system, blacklist (disable loading) nouveau (a free and open-source graphics driver for NVIDIA written by independent software engineers): https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver/951892#951892
