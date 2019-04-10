@@ -8,13 +8,17 @@ set number
 " Set horizontal line under cursor
 set cursorline
 
-let mapleader = ","
+" Uppercase word under cursor
+imap <c-u> <esc>viwUea
+nmap <c-u> viwU
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+let mapleader = ","
 
 " Open and close NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
