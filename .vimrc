@@ -102,3 +102,7 @@ inoremap <up> <Esc>:m .-2<CR>==gi
 inoremap <down> <Esc>:m .+1<CR>==gi
 vnoremap <up> :m '<-2<CR>gv=gv
 vnoremap <down> :m '>+1<CR>gv=gv
+
+" Easily modify .vimrc file
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
