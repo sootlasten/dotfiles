@@ -9,14 +9,14 @@ set number
 set cursorline
 
 " Uppercase word under cursor
-imap <c-u> <esc>viwUea
-nmap <c-u> viwU
+inoremap <c-u> <esc>viwUea
+nnoremap <c-u> viwU
 
 " Disable Arrow keys in Escape mode
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
 let mapleader = ","
 
