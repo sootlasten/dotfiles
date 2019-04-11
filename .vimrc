@@ -21,7 +21,7 @@ noremap <right> <nop>
 let mapleader = ","
 
 " Open and close NERDTree
-nmap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 " Tab navigation
 nnoremap tn  :tabnew<CR>
