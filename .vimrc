@@ -19,35 +19,43 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 let mapleader = ","
+let maplocalleader = ","
 
 " Open and close NERDTree
 nnoremap <leader>n :NERDTreeToggle<cr>
 
 " Tab navigation
-nnoremap tn  :tabnew<CR>
-nnoremap td  :tabclose<CR>
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
+nnoremap tn  :tabnew<cr>
+nnoremap td  :tabclose<cr>
+nnoremap th  :tabfirst<cr>
+nnoremap tk  :tabnext<cr>
+nnoremap tj  :tabprev<cr>
+nnoremap tl  :tablast<cr>
 
-" Python's debugger
-nnoremap <leader>t yyP^Cimport pdb; pdb.set_trace()<Esc>
+" Python-specific mappings
+augroup filetype_python   
+    autocmd!
+    autocmd FileType python nnoremap <buffer> <localleader>d Oimport pdb; pdb.set_trace()<esc>j
+    autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+augroup END
 
-" Insert a print statement in C
-nnoremap <leader>d yyP^Cprintf("HERE!\n");<Esc>
+" C++-specific mappings
+augroup filetype_cpp
+    autocmd!
+    autocmd FileType cpp nnoremap <buffer> <localleader>d Oprintf("HERE!\n");<esc>j
+augroup END
 
 " Turn highlighted search on by default
 set hlsearch
 
 " Press Space to turn off highlighting and clear any message already displayed.
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<cr>
 
 " Highlight and search all instances of a word under cursor, when idle.
 let g:highlighting = 0
 function! Highlighting()
   let @/ = '\<'.expand('<cword>').'\>'
-  return ":silent set hlsearch\<CR>"
+  return ":silent set hlsearch\<cr>"
 endfunction
 nnoremap <silent> <expr> <leader>h Highlighting()
 
@@ -61,47 +69,47 @@ function! NumberToggle()
     endif
 endfunction
 
-nnoremap <silent>  <leader>r :call NumberToggle()<CR>
+nnoremap <silent>  <leader>r :call NumberToggle()<cr>
 
 " Basic brace pair completion for parenthesis, brackets and braces. If you quickly press Enter after the open brace (to begin a code block), the closing brace will be inserted on the line below the cursor. If you quickly press the open brace key again after the open brace, nothing extra will be inserted—you will just get a single open brace. Finally, if you quickly type an open and close brace, Vim will not do anything special.
 "Parentheses
 inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O
+inoremap (<cr>  (<cr>)<esc>O
 inoremap ((     (
 inoremap ()     ()
 
 "Brackets
 inoremap [      []<Left>
-inoremap [<CR>  [<CR>]<Esc>O
+inoremap [<cr>  [<cr>]<esc>O
 inoremap [[     [
 inoremap []     []
 
 "Braces
 inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
+inoremap {<cr>  {<cr>}<esc>O
 inoremap {{     {
 inoremap {}     {}
 
 " Double quotation marks
 inoremap "      ""<Left>
-inoremap "<CR>  "<CR>"<Esc>O
+inoremap "<cr>  "<cr>"<esc>O
 inoremap ""     "
 inoremap ""     ""
 
 " Single quotation marks
 inoremap '      ''<Left>
-inoremap '<CR>  '<CR>"<Esc>O
+inoremap '<cr>  '<cr>"<esc>O
 inoremap ''     '
 inoremap ''     ''
 
 
 " Move entire lines up and down using the arrow keys in normal, insert and visual modes
-nnoremap <up> :m .-2<CR>== 
-nnoremap <down> :m .+1<CR>== 
-inoremap <up> <Esc>:m .-2<CR>==gi
-inoremap <down> <Esc>:m .+1<CR>==gi
-vnoremap <up> :m '<-2<CR>gv=gv
-vnoremap <down> :m '>+1<CR>gv=gv
+nnoremap <up> :m .-2<cr>== 
+nnoremap <down> :m .+1<cr>== 
+inoremap <up> <esc>:m .-2<cr>==gi
+inoremap <down> <esc>:m .+1<cr>==gi
+vnoremap <up> :m '<-2<cr>gv=gv
+vnoremap <down> :m '>+1<cr>gv=gv
 
 " Easily modify .vimrc file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
