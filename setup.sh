@@ -8,4 +8,7 @@ for f in .vimrc .vim .tmux.conf
 do 
     ln -s $script_path/$f $HOME/$f
 done
+
+# make new directory to .vimrc for swapfiles
+mkdir $HOME/.vimrc/tmp
     

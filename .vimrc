@@ -106,3 +106,12 @@ vnoremap <down> :m '>+1<CR>gv=gv
 " Easily modify .vimrc file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Surround text with double or single quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>el
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
+
+" Organize swapfiles into one place
+" https://vi.stackexchange.com/questions/177/what-is-the-purpose-of-swap-files
+set directory^=$HOME/.vim/tmp//
+
