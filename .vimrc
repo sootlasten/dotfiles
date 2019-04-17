@@ -35,14 +35,14 @@ nnoremap tl  :tablast<cr>
 " Python-specific mappings
 augroup filetype_python   
     autocmd!
-    autocmd FileType python nnoremap <buffer> <localleader>d Oimport pdb; pdb.set_trace()<esc>j
+    autocmd FileType python nnoremap <buffer> <localleader>d yyP^Cimport pdb; pdb.set_trace()<esc>j
     autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 augroup END
 
 " C++-specific mappings
 augroup filetype_cpp
     autocmd!
-    autocmd FileType cpp nnoremap <buffer> <localleader>d Oprintf("HERE!\n");<esc>j
+    autocmd FileType cpp nnoremap <buffer> <localleader>d yyP^Cprintf("HERE!\n");<esc>j
 augroup END
 
 " Turn highlighted search on by default
