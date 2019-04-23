@@ -9,6 +9,6 @@ do
     ln -s $script_path/$f $HOME/$f
 done
 
-# make new directory to .vimrc for swapfiles
-mkdir $HOME/.vimrc/tmp
+# make new directory to .vim for swapfiles
+mkdir -p $HOME/.vim/tmp
     
