@@ -44,6 +44,7 @@ augroup END
 augroup filetype_cpp
     autocmd!
     autocmd FileType cpp nnoremap <buffer> <localleader>d yyP^Cprintf("HERE!\n");<esc>j
+    autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
 augroup END
 
 " Turn highlighted search on by default
