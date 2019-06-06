@@ -6,4 +6,5 @@ Additional tips:
 
 TODO! 
 
-Automatically uninstall existing tmux if exists and install tmux 2.1 from source instead! 
+* Automatically uninstall existing tmux if exists and install tmux 2.1 from source instead! 
+* How to block comment with a shortcut in vim
