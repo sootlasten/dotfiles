@@ -96,16 +96,16 @@ inoremap {}     {}
 
 " Double quotation marks
 inoremap "      ""<Left>
-inoremap "<cr>  "<cr>"<esc>O
-inoremap ""     "
-inoremap ""     ""
 
 " Single quotation marks
 inoremap '      ''<Left>
-inoremap '<cr>  '<cr>"<esc>O
-inoremap ''     '
-inoremap ''     ''
 
+" Disable doubling quotation marks in Vimscript files
+augroup filetype_cpp
+    autocmd!
+    autocmd FileType vim inoremap ' '
+    autocmd FileType vim inoremap " "
+augroup END
 
 " Move entire lines up and down using the arrow keys in normal, insert and visual modes
 nnoremap <up> :m .-2<cr>== 
