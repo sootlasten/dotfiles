@@ -40,6 +40,7 @@ augroup filetype_python
     autocmd!
     autocmd FileType python nnoremap <buffer> <localleader>d yyP^Cimport pdb; pdb.set_trace()<esc>j
     autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+    autocmd FileType python vnoremap <buffer> <localleader>c I#<esc>
 augroup END
 
 " C++-specific mappings
