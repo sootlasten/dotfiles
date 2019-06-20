@@ -22,3 +22,6 @@ mkdir -p $HOME/.vim/tmp
 # aliases for bash
 source aliases.sh
 
+# source bashrc
+source $HOME/.bashrc
+
