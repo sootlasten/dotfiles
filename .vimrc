@@ -48,6 +48,7 @@ augroup filetype_cpp
     autocmd!
     autocmd FileType cpp nnoremap <buffer> <localleader>d yyP^Cprintf("HERE!\n");<esc>j
     autocmd FileType cpp nnoremap <buffer> <localleader>c I//<esc>
+    autocmd FileType cpp vnoremap <buffer> <localleader>c I//<esc>
 augroup END
 
 " Turn highlighted search on by default
@@ -102,7 +103,7 @@ inoremap "      ""<Left>
 inoremap '      ''<Left>
 
 " Disable doubling quotation marks in Vimscript files
-augroup filetype_cpp
+augroup filetype_vim
     autocmd!
     autocmd FileType vim inoremap ' '
     autocmd FileType vim inoremap " "
@@ -127,4 +128,7 @@ nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
 " Organize swapfiles into one place
 " https://vi.stackexchange.com/questions/177/what-is-the-purpose-of-swap-files
 set directory^=$HOME/.vim/tmp//
+
+" Delete line above and add a whitespace instead
+nnoremap du kdd
 
