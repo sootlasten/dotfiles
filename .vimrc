@@ -38,7 +38,8 @@ nnoremap tl  :tablast<cr>
 " Python-specific mappings
 augroup filetype_python   
     autocmd!
-    autocmd FileType python nnoremap <buffer> <localleader>d yyP^Cimport pdb; pdb.set_trace()<esc>j
+    autocmd FileType python nnoremap <buffer> <localleader>du yyP^Cimport pdb; pdb.set_trace()<esc>j
+    autocmd FileType python nnoremap <buffer> <localleader>dd yyp^Cimport pdb; pdb.set_trace()<esc>k
     autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
     autocmd FileType python vnoremap <buffer> <localleader>c I#<esc>
 augroup END
