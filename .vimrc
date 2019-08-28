@@ -52,6 +52,13 @@ augroup filetype_cpp
     autocmd FileType cpp vnoremap <buffer> <localleader>c I//<esc>
 augroup END
 
+" C-specific mappings
+augroup filetype_c
+    autocmd!
+    autocmd FileType c nnoremap <buffer> <localleader>c I//<esc>
+    autocmd FileType c vnoremap <buffer> <localleader>c I//<esc>
+augroup END
+
 " Turn highlighted search on by default
 set hlsearch
 
