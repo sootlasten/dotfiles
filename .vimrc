@@ -140,3 +140,6 @@ set directory^=$HOME/.vim/tmp//
 " Delete line above and add a whitespace instead
 nnoremap du kdd
 
+" Disable swapfile creation
+set noswapfile
+
