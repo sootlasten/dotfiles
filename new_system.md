@@ -1,5 +1,7 @@
 General
 -------
+Words of wisdom: if you have any problems related to new installation (e.g. no wifi adapter found), *always* start googling for solutions related to your specific machine (e.g. Dell XPS 15), not for general approaches!
+
 * Install Chrome: https://askubuntu.com/questions/510056/how-to-install-google-chrome
 * Install Vimium: https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
 * Permanently switch Caps Lock and Esc: https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc (Ubuntu 16.04) or https://askubuntu.com/questions/1059663/remapping-caps-lock-to-escape-in-ubuntu-18-04-bionic (Ubunu 18.04)
