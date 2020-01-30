@@ -15,5 +15,6 @@ Words of wisdom: if you have any problems related to new installation (e.g. no w
 Specific
 --------
 * Getting wifi working on Dell XPS 15: https://support.killernetworking.com/knowledge-base/killer-ax1650-in-debian-ubuntu-16-04/
+* Solving "gpu fallen off the bus" error on Dell XPS 15: https://forums.linuxmint.com/viewtopic.php?t=258577
 * Dynamically initializing ros env vars: `sudo bash -c 'printf "source /opt/ros/kinetic/setup.bash\nsource $HOME/echo/devel/setup.bash" > /usr/local/bin/initros'`
 
