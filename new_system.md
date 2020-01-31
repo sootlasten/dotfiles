@@ -5,6 +5,7 @@ Words of wisdom: if you have any problems related to new installation (e.g. no w
 * Install Chrome: https://askubuntu.com/questions/510056/how-to-install-google-chrome
 * Install Vimium: https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
 * Permanently switch Caps Lock and Esc: https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc (Ubuntu 16.04) or https://askubuntu.com/questions/1059663/remapping-caps-lock-to-escape-in-ubuntu-18-04-bionic (Ubunu 18.04)
+* Quickly switch between keyboard layouts: https://askubuntu.com/questions/1029588/18-04-ctrlshift-to-change-language
 * Install vim-gtk: sudo apt install vim-gtk
 * Increase key repeat time and delay (put into ~/.xinitrc for startx to pick it up): xset r rate 250 120
 * Disable error sound: https://askubuntu.com/questions/1030515/turn-off-error-sound-on-ubuntu-18-04
