@@ -12,6 +12,7 @@ Words of wisdom: if you have any problems related to new installation (e.g. no w
 * If lspci hangs the system, blacklist (disable loading) nouveau (a free and open-source graphics driver for NVIDIA written by independent software engineers): https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver/951892#951892
 * Connecting to GitHub with SSH (necessary when using 2FA): https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh 
 * Installing Miniconda2: https://docs.conda.io/en/latest/miniconda.html. Once installed, run `sudo bash -c 'echo "PATH=$HOME/miniconda2/bin/:\$PATH" > /usr/local/bin/initconda'` to be able to add conda dynamically into your path by calling `initconda`
+* Creating ssh aliases: https://www.ostechnix.com/how-to-create-ssh-alias-in-linux/
     
 Specific
 --------
