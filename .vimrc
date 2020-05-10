@@ -132,6 +132,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Surround text with double or single quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>el
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>el
+nnoremap <leader>* viw<esc>a*<esc>bi*<esc>el
 
 " Organize swapfiles into one place
 " https://vi.stackexchange.com/questions/177/what-is-the-purpose-of-swap-files
