@@ -146,3 +146,7 @@ nnoremap du kdd
 " Disable swapfile creation
 set noswapfile
 
+" Check the current directory for tags and keep going one directory up all the way
+" to the root folder. This allows you to be in any sub-directory in your project and
+" still be able to find the tags files.
+set tags=tags;/
